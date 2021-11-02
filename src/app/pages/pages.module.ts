@@ -28,6 +28,18 @@ import { CreatetaskComponent } from './createtask/createtask.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    DashboardComponent,
+    TasksComponent,
+    ReminderComponent,
+    MypocketComponent,
+    ArchiveComponent,
+    UseraccountComponent,
+    TaskviewComponent,
+    SigninComponent,
+    SignupComponent,
+    CreatetaskComponent
   ]
 })
 export class PagesModule { }
