@@ -10,7 +10,7 @@ import { TaskviewComponent } from './taskview/taskview.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { CreatetaskComponent } from './createtask/createtask.component';
-
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -24,10 +24,11 @@ import { CreatetaskComponent } from './createtask/createtask.component';
     TaskviewComponent,
     SigninComponent,
     SignupComponent,
-    CreatetaskComponent
+    CreatetaskComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     DashboardComponent,

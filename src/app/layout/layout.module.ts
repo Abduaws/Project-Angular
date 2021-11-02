@@ -4,14 +4,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MasterContainerComponent } from './master-container/master-container.component';
 
 
-
 @NgModule({
   declarations: [
     NavbarComponent,
     MasterContainerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     NavbarComponent,
