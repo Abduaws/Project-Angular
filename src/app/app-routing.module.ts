@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: 'useraccount', component: UseraccountComponent},
   { path: 'taskview', component: TaskviewComponent},
   { path: 'signup', component: SignupComponent},
-  { path: 'createtask', component: CreatetaskComponent}
+  { path: 'createtask', component: CreatetaskComponent},
+  { path: '**', redirectTo: ''}
 ];
 
 @NgModule({
