@@ -15,7 +15,9 @@ import { MasterContainerComponent } from './master-container/master-container.co
   ],
   exports: [
     NavbarComponent,
-    MasterContainerComponent
+    MasterContainerComponent,
   ]
 })
-export class LayoutModule { }
+export class LayoutModule { 
+   
+}

@@ -5,11 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './master-container.component.html',
   styleUrls: ['./master-container.component.css']
 })
-export class MasterContainerComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class MasterContainerComponent{
+  
 }
