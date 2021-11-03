@@ -19,5 +19,4 @@ export class Account{
     Account.usernames.push(usernname);
     Account.passwords.push(password);
   }
-
 }
