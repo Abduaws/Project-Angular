@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { animationFrameScheduler, range } from 'rxjs';
 
 @Component({
   selector: 'app-signup',
@@ -11,5 +12,5 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }
