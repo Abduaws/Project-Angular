@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PageServiceService } from '../page-service.service';
 
 @Component({
   selector: 'app-signin',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent {
 
+    constructor (public __pageService: PageServiceService) { }
 
 }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { PageServiceService } from '../page-service.service';
 
 @Component({
   selector: 'app-useraccount',
@@ -7,5 +8,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./useraccount.component.css']
 })
 export class UseraccountComponent{
+
+  constructor(public __pageService: PageServiceService) { }
   
 }

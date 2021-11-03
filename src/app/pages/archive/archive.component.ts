@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageServiceService } from '../page-service.service';
 
 @Component({
   selector: 'app-archive',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArchiveComponent implements OnInit {
 
-  constructor() { }
+  constructor(public __pageService: PageServiceService) { }
 
   ngOnInit(): void {
   }
