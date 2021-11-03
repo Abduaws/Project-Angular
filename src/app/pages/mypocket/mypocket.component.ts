@@ -7,10 +7,10 @@ import { PageServiceService } from '../page-service.service';
   styleUrls: ['./mypocket.component.css']
 })
 export class MypocketComponent implements OnInit {
-  tasks:string[] = [];
+  tasks:string[][] = [];
   startindex = 0;
   constructor(public __pageService: PageServiceService) { 
-    this.tasks = __pageService.completed_task_list;
+    this.tasks = PageServiceService.completed_task_list;
     this.startindex = Math.floor(Math.random()*(this.tasks.length-5))
   }
 

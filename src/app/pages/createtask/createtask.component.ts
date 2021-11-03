@@ -13,4 +13,10 @@ export class CreatetaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addtask(name:string,date:string,disc:string){
+    PageServiceService.task_list.splice(0,0,[name,date,disc]);
+    PageServiceService.ongoing_task_list.splice(0,0,[name,date,disc]);
+    console.log(PageServiceService.task_list);
+  }
+
 }

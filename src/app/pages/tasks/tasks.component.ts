@@ -7,10 +7,10 @@ import { PageServiceService } from '../page-service.service';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-  tasks:string[] = [];
+  tasks:string[][] = [];
   startindex = 0;
   constructor(public __pageService: PageServiceService) { 
-    this.tasks = __pageService.ongoing_task_list;
+    this.tasks = PageServiceService.ongoing_task_list;
     this.startindex = Math.floor(Math.random()*(this.tasks.length-5))
   }
 
