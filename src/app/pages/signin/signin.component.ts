@@ -7,16 +7,11 @@ import { PageServiceService } from '../page-service.service';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
-
+    goodtogo="";
     constructor (public __pageService: PageServiceService) { }
-
-}
-
-export class Account{
-  static usernames:string[] = [];
-  static passwords:string[] = [];
-  constructor(usernname:string, password:string){
-    Account.usernames.push(usernname);
-    Account.passwords.push(password);
-  }
-}
+    checkinfo(username:string,password:string){
+      if(username=="Abduaws" && password=="19p6458"){
+        this.goodtogo="/dashboard";
+      }
+    }
+} 

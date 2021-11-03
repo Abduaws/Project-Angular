@@ -7,8 +7,12 @@ import { PageServiceService } from '../page-service.service';
   styleUrls: ['./archive.component.css']
 })
 export class ArchiveComponent implements OnInit {
-
-  constructor(public __pageService: PageServiceService) { }
+  tasks:string[] = [];
+  startindex = 0;
+  constructor(public __pageService: PageServiceService) { 
+    this.tasks = __pageService.task_list;
+    this.startindex = Math.floor(Math.random()*(this.tasks.length-5))
+  }
 
   ngOnInit(): void {
   }
