@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { PageServiceService } from '../page-service.service';
 
 @Component({
-  selector: 'app-taskview',
-  templateUrl: './taskview.component.html',
-  styleUrls: ['./taskview.component.css']
+  selector: 'app-taskviewalt',
+  templateUrl: './taskviewalt.component.html',
+  styleUrls: ['./taskviewalt.component.css']
 })
-export class TaskviewComponent implements OnInit {
+export class TaskviewaltComponent implements OnInit {
   name = PageServiceService.current_task[0];
   date = PageServiceService.current_task[1];
   disc = PageServiceService.current_task[2];
@@ -14,15 +14,6 @@ export class TaskviewComponent implements OnInit {
   constructor(public __pageService: PageServiceService) { }
 
   ngOnInit(): void {
-  }
-
-  completetask(){
-    for(let i =0;i<PageServiceService.ongoing_task_list.length;i++){
-      if(PageServiceService.ongoing_task_list[i][0]==PageServiceService.current_task[0]){
-        PageServiceService.ongoing_task_list.splice(i,1);
-        PageServiceService.completed_task_list.splice(0,0,PageServiceService.current_task);
-      }
-    }
   }
 
   deletetask(){

@@ -11,6 +11,7 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { CreatetaskComponent } from './createtask/createtask.component';
 import { RouterModule } from '@angular/router';
+import { TaskviewaltComponent } from './taskviewalt/taskviewalt.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { RouterModule } from '@angular/router';
     SigninComponent,
     SignupComponent,
     CreatetaskComponent,
+    TaskviewaltComponent,
   ],
   imports: [
     CommonModule,

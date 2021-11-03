@@ -9,6 +9,7 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
 import { TaskviewComponent } from './pages/taskview/taskview.component';
+import { TaskviewaltComponent } from './pages/taskviewalt/taskviewalt.component';
 import { UseraccountComponent } from './pages/useraccount/useraccount.component';
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'taskview', component: TaskviewComponent},
   { path: 'signup', component: SignupComponent},
   { path: 'createtask', component: CreatetaskComponent},
+  {path: 'taskviewalt', component: TaskviewaltComponent},
   { path: '**', redirectTo: ''}
 ];
 

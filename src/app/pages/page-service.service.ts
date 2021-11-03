@@ -4,6 +4,7 @@ import { Injectable, Input } from '@angular/core';
   providedIn: 'root'
 })
 export class PageServiceService {
+  static current_task:string[] = [];
   static task_list = [
     ["Do Chores","01/01/2002","Default task"],
     ["Cook Food","01/01/2002","Default task"],

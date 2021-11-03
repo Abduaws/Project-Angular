@@ -17,4 +17,7 @@ export class ArchiveComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  presstask(index:number){
+    PageServiceService.current_task=this.tasks[index];
+  }
 }

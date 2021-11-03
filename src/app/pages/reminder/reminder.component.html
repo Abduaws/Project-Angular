@@ -35,9 +35,9 @@
           <tr>
             <td style="height: 80%;">
               <div class="btn-group-vertical" style="width: 100%;height: 100%;margin: 0%;">
-                <button type="button" class="btn btn-outline-primary" >{{tasks[startindex][0]}}</button>
-                <button type="button" class="btn btn-outline-primary" >{{tasks[startindex+1][0]}}</button>
-                <button type="button" class="btn btn-outline-primary" >{{tasks[startindex+2][0]}}</button>
+                <button (click)="presstask(startindex)" routerLink="/taskview" type="button" class="btn btn-outline-primary" >{{tasks[startindex][0]}}</button>
+                <button (click)="presstask(startindex+1)" routerLink="/taskview" type="button" class="btn btn-outline-primary" >{{tasks[startindex+1][0]}}</button>
+                <button (click)="presstask(startindex+2)" routerLink="/taskview" type="button" class="btn btn-outline-primary" >{{tasks[startindex+2][0]}}</button>
             </div>
             </td>
           </tr>
