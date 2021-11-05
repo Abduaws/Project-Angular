@@ -63,7 +63,7 @@ export class TasksComponent implements OnInit {
     if(check){
       this.hide = !this.hide;
       this.startindex=index;
-      this.class="btn btn-outline-primary nice";
+      this.class="btn btn-outline-primary ";
     }
     if(!check && this.hide){
       this.hide=!this.hide;
