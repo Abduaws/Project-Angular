@@ -18,7 +18,13 @@ export class CreatetaskComponent implements OnInit {
   addtask(name:string,date:string,disc:string){
     PageServiceService.task_list.splice(0,0,[name,date,disc]);
     PageServiceService.ongoing_task_list.splice(0,0,[name,date,disc]);
-    console.log(PageServiceService.task_list);
+    for(let i =0;i<10000;i++){
+      if(localStorage[i]==undefined){
+        localStorage.setItem(String(i),name+","+date+","+disc);
+        console.log(localStorage)
+        break
+      }
+    }
   }
 
 }

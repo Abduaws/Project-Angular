@@ -57,6 +57,7 @@ export class TasksComponent implements OnInit {
       if(PageServiceService.ongoing_task_list[i][0].toLowerCase()==info.toLowerCase()){
         check = true;
         index=i;
+        break
       }
     }
     if(check){

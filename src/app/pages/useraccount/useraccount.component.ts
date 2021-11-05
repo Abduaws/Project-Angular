@@ -16,5 +16,23 @@ export class UseraccountComponent{
     this.name=PageServiceService.current_account[0];
     this.pass=PageServiceService.current_account[1];
   }
+
+  logout(){
+    PageServiceService.loggedin=false;
+  }
+
+  delete(){
+    PageServiceService.loggedin=false;
+    for(let i=0;i<10000;i++){
+      let localaccount = localStorage[i].split(",")
+      if(localaccount.length==2 && PageServiceService.current_account[0]==localaccount[0]){
+        localStorage.removeItem(String(i));
+        console.log(localStorage)
+      }
+      if(localStorage[i+1]==undefined){
+        break
+      }
+    }
+  }
   
 }

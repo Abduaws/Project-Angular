@@ -29,6 +29,7 @@ export class TaskviewComponent implements OnInit {
   }
 
   deletetask(){
+    let ct = PageServiceService.current_task[0]+","+PageServiceService.current_task[1]+","+PageServiceService.current_task[2]
     for(let i =0;i<PageServiceService.ongoing_task_list.length;i++){
       if(PageServiceService.ongoing_task_list[i][0]==PageServiceService.current_task[0]){
         PageServiceService.ongoing_task_list.splice(i,1);
@@ -42,6 +43,13 @@ export class TaskviewComponent implements OnInit {
     for(let i =0;i<PageServiceService.completed_task_list.length;i++){
       if(PageServiceService.completed_task_list[i][0]==PageServiceService.current_task[0]){
         PageServiceService.completed_task_list.splice(i,1);
+      }
+    }
+    for(let i =0;i<10000;i++){
+      if(localStorage[i]==ct){
+        localStorage.removeItem(String(i));
+        console.log(localStorage)
+        break
       }
     }
   }

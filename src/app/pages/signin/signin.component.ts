@@ -28,7 +28,7 @@ export class SigninComponent implements OnInit{
       //       break
       //     }
       //   }
-      console.log(PageServiceService.loggedin)
+      console.log(localStorage)
       if(SigninComponent.alreadydone){
         return 0;
       }

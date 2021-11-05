@@ -10,7 +10,6 @@ import { PageServiceService } from '../page-service.service';
 export class SignupComponent implements OnInit {
 
   constructor(public __pageService: PageServiceService) {
-    console.log(localStorage);
    }
 
   ngOnInit(): void {
@@ -23,7 +22,6 @@ export class SignupComponent implements OnInit {
         break
       }
     }
-    console.log(localStorage);
   }
 
 }
