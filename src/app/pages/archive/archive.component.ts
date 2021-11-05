@@ -12,7 +12,9 @@ export class ArchiveComponent implements OnInit {
   startindex = 0;
   hide = false;
   tempindex = 0;
+  hideb = false;
   constructor(public __pageService: PageServiceService) { 
+    this.hideb=!PageServiceService.loggedin
     this.tasks = PageServiceService.task_list;
     this.startindex = Math.floor(Math.random()*(this.tasks.length-5))
     this.tempindex=this.startindex;

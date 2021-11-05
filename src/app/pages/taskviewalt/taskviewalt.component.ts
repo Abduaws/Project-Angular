@@ -7,11 +7,14 @@ import { PageServiceService } from '../page-service.service';
   styleUrls: ['./taskviewalt.component.css']
 })
 export class TaskviewaltComponent implements OnInit {
+  hideb = false;
   name = PageServiceService.current_task[0];
   date = PageServiceService.current_task[1];
   disc = PageServiceService.current_task[2];
 
-  constructor(public __pageService: PageServiceService) { }
+  constructor(public __pageService: PageServiceService) { 
+    this.hideb=!PageServiceService.loggedin
+  }
 
   ngOnInit(): void {
   }

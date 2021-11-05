@@ -7,8 +7,10 @@ import { PageServiceService } from '../page-service.service';
   styleUrls: ['./createtask.component.css']
 })
 export class CreatetaskComponent implements OnInit {
-
-  constructor(public __pageService: PageServiceService) { }
+  hideb = false;
+  constructor(public __pageService: PageServiceService) {
+    this.hideb=!PageServiceService.loggedin
+   }
 
   ngOnInit(): void {
   }

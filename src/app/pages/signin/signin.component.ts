@@ -12,6 +12,7 @@ export class SigninComponent implements OnInit{
     constructor (public __pageService: PageServiceService) { }
     
      ngOnInit(){
+       console.log(PageServiceService.loggedin)
       if(SigninComponent.alreadydone){
         return 0;
       }
@@ -38,6 +39,7 @@ export class SigninComponent implements OnInit{
         if(username==namepass[0] && password==namepass[1]){
           PageServiceService.current_account=namepass;
           this.goodtogo="/dashboard";
+          PageServiceService.loggedin=true;
           break
         }
       }

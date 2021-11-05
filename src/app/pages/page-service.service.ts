@@ -6,6 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PageServiceService {
 
+  static loggedin = false
+
   static current_account:string[] = [];
 
   static current_task:string[] = [];

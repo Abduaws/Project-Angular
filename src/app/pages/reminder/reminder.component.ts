@@ -7,9 +7,11 @@ import { PageServiceService } from '../page-service.service';
   styleUrls: ['./reminder.component.css']
 })
 export class ReminderComponent implements OnInit {
+  hideb = false;
   tasks:string[][] = [];
   startindex = 0;
   constructor(public __pageService: PageServiceService) { 
+    this.hideb=!PageServiceService.loggedin
     this.tasks = PageServiceService.ongoing_task_list;
     this.startindex = (this.tasks.length-3)
   }

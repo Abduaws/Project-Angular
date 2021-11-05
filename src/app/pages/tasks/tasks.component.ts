@@ -7,12 +7,14 @@ import { PageServiceService } from '../page-service.service';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
+  hideb = false;
   class="btn btn-outline-primary";
   tasks:string[][] = [];
   startindex = 0;
   tempindex = 0;
   hide = false;
   constructor(public __pageService: PageServiceService) { 
+    this.hideb=!PageServiceService.loggedin
     this.tasks = PageServiceService.ongoing_task_list;
     this.startindex = Math.floor(Math.random()*(this.tasks.length-5))
     this.tempindex=this.startindex;

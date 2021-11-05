@@ -8,9 +8,14 @@ import { PageServiceService } from '../page-service.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(public __pageService: PageServiceService) { }
+  hideb = false;
+
+  constructor(public __pageService: PageServiceService) { 
+    this.hideb=!PageServiceService.loggedin
+  }
 
   ngOnInit(): void {
+    
   }
 
 }

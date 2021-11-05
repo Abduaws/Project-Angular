@@ -7,12 +7,14 @@ import { PageServiceService } from '../page-service.service';
   styleUrls: ['./mypocket.component.css']
 })
 export class MypocketComponent implements OnInit {
+  hideb = false;
   class="btn btn-outline-success";
   tasks:string[][] = [];
   startindex = 0;
   hide = false;
   tempindex = 0;
   constructor(public __pageService: PageServiceService) { 
+    this.hideb=!PageServiceService.loggedin
     this.tasks = PageServiceService.completed_task_list;
     this.startindex = Math.floor(Math.random()*(this.tasks.length-5))
     this.tempindex=this.startindex;
