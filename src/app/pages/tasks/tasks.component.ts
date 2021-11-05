@@ -68,5 +68,4 @@ export class TasksComponent implements OnInit {
       this.class="btn btn-outline-primary";
     }
   }
-
 }

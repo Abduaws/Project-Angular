@@ -8,7 +8,11 @@ import { PageServiceService } from '../page-service.service';
   styleUrls: ['./useraccount.component.css']
 })
 export class UseraccountComponent{
-
-  constructor(public __pageService: PageServiceService) { }
+  name = "";
+  pass = "";
+  constructor(public __pageService: PageServiceService) { 
+    this.name=PageServiceService.current_account[0];
+    this.pass=PageServiceService.current_account[1];
+  }
   
 }
